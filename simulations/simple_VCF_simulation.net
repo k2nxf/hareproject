@@ -1,0 +1,29 @@
+* Z:\home\abram\documents\psu\ECE411\project\hareproject\simulations\simple_VCF_simulation.asc
+XU1 N006 N004 Vb 0 NC_01 NC_02 NC_03 Vcc BA4580R
+V1 Vcc 0 9.6V
+R1 Vcc Vb 10k
+R2 Vb 0 10k
+C1 Vcc 0 100µ
+C2 Vb 0 10µ
+C3 N008 N007 0.47µ
+R3 N004 N008 47k
+V2 N007 0 SINE(0 0.1 1k) AC 1
+C4 N003 N004 0.1µ
+C5 N005 N003 0.1µ
+C6 Vout N006 1µ
+R4 Vout 0 100k
+R5 N006 N005 1k
+R6 N006 N004 100k
+D1 N003 0 1N4148
+V3 CV 0 {Vc} Rser=4
+R7 N003 CV 1k
+R8 N002 N001 1k
+R9 N001 0 50k
+R10 Vcc N001 50k
+.model D D
+.lib C:\Program Files\LTC\LTspiceIV\lib\cmp\standard.dio
+.ac oct 1000 1 100MEG
+.step param Vc 1 5 1
+.lib Z:\home\abram\documents\ltspice\BA4580R_Rev002.lib
+.backanno
+.end
