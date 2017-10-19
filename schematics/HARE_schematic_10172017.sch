@@ -2615,12 +2615,12 @@ Based on the datasheets for the following products.&lt;br&gt;
 <sheets>
 <sheet>
 <plain>
-<text x="55.88" y="419.1" size="2.54" layer="91" font="vector" ratio="12">Power Supply Unit</text>
-<text x="520.7" y="327.66" size="2.54" layer="91" font="vector" ratio="12">Microcontroller</text>
-<text x="817.88" y="170.18" size="2.54" layer="91" font="vector" ratio="12">Analog Output</text>
-<text x="350.52" y="137.16" size="2.54" layer="91" font="vector" ratio="12">Voltage-Controlled Filter</text>
-<text x="579.12" y="162.56" size="2.54" layer="91" font="vector" ratio="12">Voltage-Controlled Amplifier</text>
-<text x="50.8" y="137.16" size="2.54" layer="91" font="vector" ratio="12">Analog Input</text>
+<text x="55.88" y="419.1" size="2.54" layer="97" font="vector" ratio="12">Power Supply Unit</text>
+<text x="520.7" y="327.66" size="2.54" layer="97" font="vector" ratio="12">Microcontroller</text>
+<text x="817.88" y="170.18" size="2.54" layer="97" font="vector" ratio="12">Analog Output</text>
+<text x="350.52" y="137.16" size="2.54" layer="97" font="vector" ratio="12">Voltage-Controlled Filter</text>
+<text x="579.12" y="162.56" size="2.54" layer="97" font="vector" ratio="12">Voltage-Controlled Amplifier</text>
+<text x="50.8" y="137.16" size="2.54" layer="97" font="vector" ratio="12">Analog Input</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="76.2" y="492.76"/>
