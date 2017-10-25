@@ -14066,7 +14066,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <part name="SUPPLY29" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY30" library="supply2" deviceset="GND" device=""/>
 <part name="SUPPLY31" library="supply2" deviceset="GND" device=""/>
-<part name="R29" library="resistor" deviceset="R-US_" device="R0805" value="10k"/>
 <part name="D6" library="gm-diodes" deviceset="LED" device="5MM"/>
 <part name="D7" library="gm-diodes" deviceset="LED" device="5MM"/>
 <part name="R30" library="resistor" deviceset="R-US_" device="R0805" value="1k"/>
@@ -14214,7 +14213,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <instance part="SUPPLY29" gate="GND" x="132.08" y="180.34"/>
 <instance part="SUPPLY30" gate="GND" x="142.24" y="180.34"/>
 <instance part="SUPPLY31" gate="GND" x="152.4" y="180.34"/>
-<instance part="R29" gate="G$1" x="185.42" y="213.36"/>
 <instance part="D6" gate="G$1" x="218.44" y="248.92" rot="R90"/>
 <instance part="D7" gate="G$1" x="231.14" y="248.92" rot="R90"/>
 <instance part="R30" gate="G$1" x="218.44" y="261.62" rot="R270"/>
@@ -14930,10 +14928,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <wire x1="200.66" y1="220.98" x2="177.8" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="220.98" x2="177.8" y2="223.52" width="0.1524" layer="91"/>
 <label x="177.8" y="223.52" size="1.016" layer="95" rot="R90" xref="yes"/>
-<pinref part="R29" gate="G$1" pin="1"/>
-<wire x1="180.34" y1="213.36" x2="177.8" y2="213.36" width="0.1524" layer="91"/>
-<wire x1="177.8" y1="213.36" x2="177.8" y2="220.98" width="0.1524" layer="91"/>
-<junction x="177.8" y="220.98"/>
 </segment>
 <segment>
 <pinref part="R33" gate="G$1" pin="1"/>
@@ -15352,7 +15346,6 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <net name="N$62" class="0">
 <segment>
 <pinref part="IC3" gate="1" pin="!RESET"/>
-<pinref part="R29" gate="G$1" pin="2"/>
 <wire x1="200.66" y1="213.36" x2="190.5" y2="213.36" width="0.1524" layer="91"/>
 </segment>
 </net>
@@ -15434,6 +15427,7 @@ http://www.fairchildsemi.com/ds/LM/LM7805.pdf</description>
 <label x="142.24" y="264.16" size="1.4224" layer="95" rot="R180" xref="yes"/>
 <pinref part="SW2" gate="G$1" pin="P$2"/>
 <pinref part="R33" gate="G$1" pin="2"/>
+<label x="190.5" y="213.36" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="RTS#" class="0">
