@@ -14177,7 +14177,7 @@ Based on the following sources:&lt;p&gt;
 <part name="R37" library="resistor" deviceset="R-US_" device="R0805" value="1k"/>
 <part name="R38" library="resistor" deviceset="R-US_" device="R0805" value="1k"/>
 <part name="SUPPLY37" library="supply2" deviceset="GND" device=""/>
-<part name="IC6" library="atmel" library_urn="urn:adsk.eagle:library:105" deviceset="AT25*" device="P" package3d_urn="urn:adsk.eagle:package:4324/1"/>
+<part name="IS62_SRAM_MEM" library="atmel" library_urn="urn:adsk.eagle:library:105" deviceset="AT25*" device="P" package3d_urn="urn:adsk.eagle:package:4324/1"/>
 <part name="SUPPLY38" library="supply2" deviceset="GND" device=""/>
 <part name="C28" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="SUPPLY41" library="supply2" deviceset="GND" device=""/>
@@ -14193,7 +14193,7 @@ Based on the following sources:&lt;p&gt;
 <text x="574.04" y="119.38" size="3.81" layer="97" font="vector" ratio="12">Voltage-Controlled Amplifier</text>
 <text x="27.94" y="119.38" size="3.81" layer="97" font="vector" ratio="12">Analog Input Circuitry</text>
 <text x="187.96" y="119.38" size="3.81" layer="97" font="vector" ratio="12">PWMDAC Filter</text>
-<text x="441.96" y="139.7" size="3.81" layer="97" font="vector" ratio="12">External SPI EEPROM Memory</text>
+<text x="441.96" y="139.7" size="3.81" layer="97" font="vector" ratio="12">External SPI SRAM Memory</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="287.02" y="231.14"/>
@@ -14345,7 +14345,7 @@ Based on the following sources:&lt;p&gt;
 <instance part="R37" gate="G$1" x="251.46" y="198.12" rot="R90"/>
 <instance part="R38" gate="G$1" x="170.18" y="198.12" rot="R90"/>
 <instance part="SUPPLY37" gate="GND" x="170.18" y="187.96"/>
-<instance part="IC6" gate="G$1" x="477.52" y="180.34"/>
+<instance part="IS62_SRAM_MEM" gate="G$1" x="477.52" y="180.34"/>
 <instance part="SUPPLY38" gate="GND" x="464.82" y="170.18"/>
 <instance part="C28" gate="G$1" x="464.82" y="180.34" rot="R180"/>
 <instance part="SUPPLY41" gate="GND" x="510.54" y="170.18"/>
@@ -14703,7 +14703,7 @@ Based on the following sources:&lt;p&gt;
 <wire x1="170.18" y1="193.04" x2="170.18" y2="190.5" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="GND"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="GND"/>
 <wire x1="467.36" y1="172.72" x2="464.82" y2="172.72" width="0.1524" layer="91"/>
 <pinref part="SUPPLY38" gate="GND" pin="GND"/>
 <pinref part="C28" gate="G$1" pin="1"/>
@@ -15127,7 +15127,7 @@ Based on the following sources:&lt;p&gt;
 <label x="142.24" y="271.78" size="1.4224" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="VCC"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="VCC"/>
 <pinref part="C28" gate="G$1" pin="2"/>
 <label x="457.2" y="187.96" size="1.778" layer="95" rot="R180" xref="yes"/>
 <wire x1="457.2" y1="187.96" x2="464.82" y2="187.96" width="0.1524" layer="91"/>
@@ -15139,7 +15139,7 @@ Based on the following sources:&lt;p&gt;
 <label x="518.16" y="180.34" size="1.016" layer="95" xref="yes"/>
 <pinref part="C30" gate="G$1" pin="2"/>
 <wire x1="510.54" y1="180.34" x2="518.16" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="IC6" gate="G$1" pin="WP/"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="WP/"/>
 <wire x1="510.54" y1="180.34" x2="495.3" y2="180.34" width="0.1524" layer="91"/>
 <wire x1="495.3" y1="180.34" x2="495.3" y2="177.8" width="0.1524" layer="91"/>
 <wire x1="495.3" y1="177.8" x2="490.22" y2="177.8" width="0.1524" layer="91"/>
@@ -15693,7 +15693,7 @@ Based on the following sources:&lt;p&gt;
 <label x="76.2" y="187.96" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="SCK"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="SCK"/>
 <wire x1="490.22" y1="182.88" x2="495.3" y2="182.88" width="0.1524" layer="91"/>
 <label x="495.3" y="182.88" size="1.016" layer="95" xref="yes"/>
 </segment>
@@ -15705,7 +15705,7 @@ Based on the following sources:&lt;p&gt;
 <label x="76.2" y="185.42" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="SO"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="SO"/>
 <wire x1="490.22" y1="175.26" x2="495.3" y2="175.26" width="0.1524" layer="91"/>
 <label x="495.3" y="175.26" size="1.016" layer="95" xref="yes"/>
 </segment>
@@ -15717,7 +15717,7 @@ Based on the following sources:&lt;p&gt;
 <label x="76.2" y="182.88" size="1.016" layer="95" rot="R180" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="SI"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="SI"/>
 <wire x1="490.22" y1="172.72" x2="495.3" y2="172.72" width="0.1524" layer="91"/>
 <label x="495.3" y="172.72" size="1.016" layer="95" xref="yes"/>
 </segment>
@@ -15729,7 +15729,7 @@ Based on the following sources:&lt;p&gt;
 <label x="121.92" y="198.12" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="CS/"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="CS/"/>
 <wire x1="490.22" y1="185.42" x2="495.3" y2="185.42" width="0.1524" layer="91"/>
 <label x="495.3" y="185.42" size="1.016" layer="95" xref="yes"/>
 </segment>
@@ -15743,7 +15743,7 @@ Based on the following sources:&lt;p&gt;
 <label x="121.92" y="187.96" size="1.016" layer="95" xref="yes"/>
 </segment>
 <segment>
-<pinref part="IC6" gate="G$1" pin="HOLD/"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="HOLD/"/>
 <wire x1="490.22" y1="187.96" x2="495.3" y2="187.96" width="0.1524" layer="91"/>
 <label x="495.3" y="187.96" size="1.016" layer="95" rot="MR180" xref="yes"/>
 </segment>
