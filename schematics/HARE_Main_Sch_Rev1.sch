@@ -14181,7 +14181,6 @@ Based on the following sources:&lt;p&gt;
 <part name="SUPPLY38" library="supply2" deviceset="GND" device=""/>
 <part name="C28" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
 <part name="SUPPLY41" library="supply2" deviceset="GND" device=""/>
-<part name="C30" library="resistor" deviceset="C-EU" device="C0805K" value="10uF"/>
 </parts>
 <sheets>
 <sheet>
@@ -14194,6 +14193,8 @@ Based on the following sources:&lt;p&gt;
 <text x="27.94" y="119.38" size="3.81" layer="97" font="vector" ratio="12">Analog Input Circuitry</text>
 <text x="187.96" y="119.38" size="3.81" layer="97" font="vector" ratio="12">PWMDAC Filter</text>
 <text x="441.96" y="139.7" size="3.81" layer="97" font="vector" ratio="12">External SPI SRAM Memory</text>
+<text x="482.6" y="177.8" size="1.778" layer="93">DNU</text>
+<text x="490.22" y="177.8" size="1.778" layer="91">DNU</text>
 </plain>
 <instances>
 <instance part="J1" gate="G$1" x="287.02" y="231.14"/>
@@ -14348,8 +14349,7 @@ Based on the following sources:&lt;p&gt;
 <instance part="IS62_SRAM_MEM" gate="G$1" x="477.52" y="180.34"/>
 <instance part="SUPPLY38" gate="GND" x="464.82" y="170.18"/>
 <instance part="C28" gate="G$1" x="464.82" y="180.34" rot="R180"/>
-<instance part="SUPPLY41" gate="GND" x="510.54" y="170.18"/>
-<instance part="C30" gate="G$1" x="510.54" y="175.26" rot="MR180"/>
+<instance part="SUPPLY41" gate="GND" x="510.54" y="175.26"/>
 </instances>
 <busses>
 </busses>
@@ -14711,8 +14711,9 @@ Based on the following sources:&lt;p&gt;
 <junction x="464.82" y="172.72"/>
 </segment>
 <segment>
-<pinref part="C30" gate="G$1" pin="1"/>
+<pinref part="IS62_SRAM_MEM" gate="G$1" pin="WP/"/>
 <pinref part="SUPPLY41" gate="GND" pin="GND"/>
+<wire x1="490.22" y1="177.8" x2="510.54" y2="177.8" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INPUT" class="0">
@@ -15134,16 +15135,6 @@ Based on the following sources:&lt;p&gt;
 <wire x1="464.82" y1="187.96" x2="467.36" y2="187.96" width="0.1524" layer="91"/>
 <wire x1="464.82" y1="185.42" x2="464.82" y2="187.96" width="0.1524" layer="91"/>
 <junction x="464.82" y="187.96"/>
-</segment>
-<segment>
-<label x="518.16" y="180.34" size="1.016" layer="95" xref="yes"/>
-<pinref part="C30" gate="G$1" pin="2"/>
-<wire x1="510.54" y1="180.34" x2="518.16" y2="180.34" width="0.1524" layer="91"/>
-<pinref part="IS62_SRAM_MEM" gate="G$1" pin="WP/"/>
-<wire x1="510.54" y1="180.34" x2="495.3" y2="180.34" width="0.1524" layer="91"/>
-<wire x1="495.3" y1="180.34" x2="495.3" y2="177.8" width="0.1524" layer="91"/>
-<wire x1="495.3" y1="177.8" x2="490.22" y2="177.8" width="0.1524" layer="91"/>
-<junction x="510.54" y="180.34"/>
 </segment>
 </net>
 <net name="VCA_IN" class="0">
