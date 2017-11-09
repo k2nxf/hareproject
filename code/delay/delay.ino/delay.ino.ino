@@ -3,14 +3,14 @@
 // Rev: 0001a
 
 #define PWM_FREQ 0x00FF // pwm frequency - see table
-#define PWM_MODE 0 // Fast (1) or Phase Correct (0)
+#define PWM_MODE 1 // Fast (1) or Phase Correct (0)
 #define PWM_QTY 2 // number of pwms, either 1 or 2
 #define MAX_SAMPLES 984 // max number of samples permitted by memory
 
 unsigned int loopDataL[MAX_SAMPLES] = {0};
 int i = 0;
-int rate = 984;
-float decay = 0.75;
+int rate = 984;       // assign to DPOT1 -> 0 < rate < MAX_SAMPLES
+float decay = 0.75;   // assign to DPOT2 -> output 0 < decay < 1
 
 void setup() {
   // setup ADC

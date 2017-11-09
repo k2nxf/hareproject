@@ -3,7 +3,7 @@
 // Rev: 0001a
 
 #define PWM_FREQ 0x00FF // pwm frequency - see table
-#define PWM_MODE 0 // Fast (1) or Phase Correct (0)
+#define PWM_MODE 1 // Fast (1) or Phase Correct (0)
 #define PWM_QTY 2 // number of pwms, either 1 or 2
 
 void setup() {
@@ -30,7 +30,7 @@ void loop() {
 
 ISR(TIMER1_CAPT_vect) {
   unsigned int temp = ADCL + (ADCH << 8);  // get ADC data
-  int sign = (((temp-0x8000)*2)*4)/4;   // removing DC offset and treating as a signed int
+  int sign = (((temp-0x0200)*8)*8)/4;   // removing DC offset and treating as a signed int
   temp = sign + 0x8000;
   
   // output high byte on OC1A
