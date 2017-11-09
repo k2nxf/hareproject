@@ -14345,6 +14345,8 @@ Based on the following sources:&lt;p&gt;
 <part name="C4" library="resistor" deviceset="C-EU" device="C0805K" value="1uF"/>
 <part name="SUPPLY9" library="supply2" deviceset="GND" device=""/>
 <part name="C5" library="resistor" deviceset="C-EU" device="C0805K" value="1uF"/>
+<part name="SUPPLY10" library="supply2" deviceset="GND" device=""/>
+<part name="P+5" library="supply1" deviceset="VCC" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14510,6 +14512,9 @@ Based on the following sources:&lt;p&gt;
 <instance part="C4" gate="G$1" x="256.54" y="236.22" rot="R270"/>
 <instance part="SUPPLY9" gate="GND" x="203.2" y="208.28"/>
 <instance part="C5" gate="G$1" x="139.7" y="215.9" rot="R90"/>
+<instance part="IC1" gate="P" x="309.88" y="233.68"/>
+<instance part="SUPPLY10" gate="GND" x="309.88" y="220.98"/>
+<instance part="P+5" gate="VCC" x="309.88" y="246.38"/>
 </instances>
 <busses>
 </busses>
@@ -14607,6 +14612,11 @@ Based on the following sources:&lt;p&gt;
 <pinref part="R35" gate="G$1" pin="2"/>
 <pinref part="P+8" gate="VCC" pin="VCC"/>
 <wire x1="154.94" y1="271.78" x2="154.94" y2="274.32" width="0.1524" layer="91"/>
+</segment>
+<segment>
+<pinref part="IC1" gate="P" pin="V+"/>
+<pinref part="P+5" gate="VCC" pin="VCC"/>
+<wire x1="309.88" y1="241.3" x2="309.88" y2="243.84" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14867,6 +14877,11 @@ Based on the following sources:&lt;p&gt;
 <wire x1="210.82" y1="220.98" x2="203.2" y2="220.98" width="0.1524" layer="91"/>
 <wire x1="203.2" y1="220.98" x2="203.2" y2="215.9" width="0.1524" layer="91"/>
 <junction x="203.2" y="215.9"/>
+</segment>
+<segment>
+<pinref part="SUPPLY10" gate="GND" pin="GND"/>
+<pinref part="IC1" gate="P" pin="V-"/>
+<wire x1="309.88" y1="223.52" x2="309.88" y2="226.06" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="INPUT" class="0">
@@ -15882,24 +15897,6 @@ Based on the following sources:&lt;p&gt;
 </nets>
 </sheet>
 </sheets>
-<errors>
-<approved hash="104,1,274.32,81.28,IC1P,V+,VCC,,,"/>
-<approved hash="104,1,274.32,66.04,IC1P,V-,GND,,,"/>
-<approved hash="104,1,497.84,60.96,IC2P,V+,VCC,,,"/>
-<approved hash="104,1,497.84,45.72,IC2P,V-,GND,,,"/>
-<approved hash="104,1,200.66,215.9,IC3,VCC,5V,,,"/>
-<approved hash="104,1,81.28,208.28,U1,VCC,5V,,,"/>
-<approved hash="104,1,81.28,205.74,U1,AVCC,5V,,,"/>
-<approved hash="104,1,116.84,83.82,IC4P,V+,VCC,,,"/>
-<approved hash="104,1,116.84,68.58,IC4P,V-,GND,,,"/>
-<approved hash="105,1,344.17,246.38,N$1,,,,,"/>
-<approved hash="105,1,22.86,205.74,N$2,,,,,"/>
-<approved hash="105,1,713.74,76.2,N$3,,,,,"/>
-<approved hash="105,1,566.42,76.2,N$4,,,,,"/>
-<approved hash="105,1,406.4,76.2,N$5,,,,,"/>
-<approved hash="105,1,22.86,76.2,N$6,,,,,"/>
-<approved hash="105,1,182.88,76.2,N$20,,,,,"/>
-</errors>
 </schematic>
 </drawing>
 <compatibility>
