@@ -1,5 +1,4 @@
 // The H.A.R.E Project - Audio pass-through for ATMega328P (aka Clean)
-// ADC capabilities grabbed from: http://wiki.openmusiclabs.com/wiki/PWMDAC
 // Rev: 0001a
 
 #include <avr/io.h>
