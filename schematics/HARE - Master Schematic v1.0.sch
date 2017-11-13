@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!DOCTYPE eagle SYSTEM "eagle.dtd">
-<eagle version="8.3.1">
+<eagle version="8.4.0">
 <drawing>
 <settings>
 <setting alwaysvectorfont="yes"/>
@@ -16401,7 +16401,7 @@ Based on the following sources:&lt;p&gt;
 <text x="25.4" y="276.86" size="3.81" layer="97" font="vector" ratio="12">Analog Input Circuitry</text>
 <text x="185.42" y="276.86" size="3.81" layer="97" font="vector" ratio="12">PWMDAC Filter</text>
 <text x="271.78" y="297.18" size="3.81" layer="97" font="vector" ratio="12">External SPI SRAM Memory</text>
-<text x="462.28" y="33.02" size="3.81" layer="97" ratio="14">The H.A.R.E Project - ECE411</text>
+<text x="462.28" y="33.02" size="2.54" layer="97" ratio="14">Team 13: The H.A.R.E Project - ECE411</text>
 <text x="551.18" y="12.7" size="3.81" layer="97" font="vector" ratio="15">D</text>
 </plain>
 <instances>
