@@ -1,50 +1,99 @@
-// The H.A.R.E Project - Audio pass-through for ATMega328P
+// The H.A.R.E Project - Audio pass-through for ATMega328P (aka Clean)
 // ADC capabilities grabbed from: http://wiki.openmusiclabs.com/wiki/PWMDAC
 // Rev: 0001a
-#define F_CPU 16000000UL                // define MCU clock speed
-#define __AVR_ATmega328P__ 1            // specify use of ATMega328P
-#define __OPTIMIZE__ 1                  // turn on compiler optimizations (to use delay.h)
 
 #include <avr/io.h>
 #include <avr/interrupt.h>
 #include <util/delay.h>
 
-#define PWM_FREQ 0x00FF                 // pwm frequency - see table
-#define PWM_MODE 0                     // Fast (1) or Phase Correct (0)
-#define PWM_QTY 2                       // number of pwms, either 1 or 2
+#define F_CPU 16000000UL                // define MCU clock speed
+#define __AVR_ATmega328P__ 1            // specify use of ATMega328P
+#define __OPTIMIZE__ 1                  // turn on compiler optimizations (to use delay.h)
+#define MAX_ADC 4                       // max number of ADC channels
 
-int main(void) {
+// -------- INITILIZATION ---------- //
+void initADC(void) {
     // setup ADC
-    ADMUX = 0x60;                         // left adjust, adc0, internal vcc, gain x200
-    ADCSRA = 0xe5;                        // turn on adc, clk/32, auto trigger
-    ADCSRB =0x07;                         // t1 capture for trigger
-    DIDR0 = 0x01;                         // turn off digital inputs for adc0
+    ADMUX = 0x40;                         // right adjust, ADC0, internal VCC, gain x200
+    ADCSRA = 0xe6;                        // enable ADC, clk/64, disable auto trigger
+    ADCSRB =0x01;                         // analog comparator mode
+    DIDR0 = 0x3F;                         // turn off digital inputs for all ADC channels
+}
 
-    // setup DAC PWM
-    TCCR1A = (((PWM_QTY - 1) << 5) | 0x80 | (PWM_MODE << 1));
-    TCCR1B = ((PWM_MODE << 4) | 0x11);    // ck/1
-    TIMSK1 = 0x20;                        // interrupt on capture interrupt
-    ICR1H = (PWM_FREQ >> 8);
-    ICR1L = (PWM_FREQ & 0xff);
-    DDRB |= ((PWM_QTY << 1) | 0x02);      // turn on outputs
+void initPWM(void) {
+    // setup PWM output
+    DDRD = 0x68;                          // make pin 3, 5, and 6 outputs
+    OCR0A = 128;                          // 50% duty cycle on pin 6
+    OCR0B = 128;                          // 50% duty cycle on pin 5
+    OCR2B = 128;                          // 50% duty cycle on pin 3
+    // TIMER 0
+    TCCR0A = 0xA3;                        // set pins 5/6 non-inverting and fast PWM mode
+    TCCR0B = 0x02;                        // prescalar divide by 8 (2 MHz)
+    // TIMER 2
+    TCCR2A = 0xA3;                        // same as Timer 0 for Timer 2
+    TCCR2B = 0x02;
+
     SREG = 0x80;                          // enable global interrupts
+}
+
+// -------- UTILITIES ---------- //
+uint16_t analogRead(uint8_t channel) {
+    ADMUX = 0x40;                         // clear last ADC channel
+    ADMUX |= channel;                     // select new ADC
+    ADCSRA |= (1<<ADSC);                  // start conversion
+    while(ADCSRA == 0xe6);                // wait for conversion
+    return (ADCL + (ADCH << 8));
+}
+
+void writeCutoff(uint8_t value) {
+    // VCF cutoff control function
+    OCR0A = value;
+}
+
+void writeResonance(uint8_t value) {
+    // VCF resonance control function
+    OCR2B = value;
+}
+
+void writeAmplitude(uint8_t value) {
+    // VCA amplitude control function
+    OCR0B = value;
+}
+
+
+// ------------- MAIN PROGRAM ------------ //
+int main(void) {
+    // call initialization routines
+    initADC();
+    initPWM();
+
+    // setup program variables
+    uint8_t n = 0;                                // ADC counter
+    uint16_t audio = 0;                           // audio sample from ADC
 
     // main processing loop
     while(1) {
-      //_delay_ms(500);
+        n = (n>(MAX_ADC - 1)) ? 0 : n;            // if n>3, reset n to 0
+
+        switch(n) {                               // grab the ADC values
+            case 0:                               // read value on ADC0
+                audio = analogRead(n);
+                break;
+
+            case 1:
+                writeCutoff((analogRead(n))/4);   // read value on ADC1
+                break;
+
+            case 2:
+                writeResonance((analogRead(n))/4);// read value on ADC2
+                break;
+
+            case 3:
+                writeAmplitude((analogRead(n))/4);// read value on ADC3
+                break;
+            }
+        n++;
     }
-}
-
-ISR(TIMER1_CAPT_vect) {
-  unsigned int temp = ADCL + (ADCH << 8);  // get ADC data
-  // output high byte on OC1A
-  OCR1AH = 0x00; // takes top 8 bits
-  OCR1AL = temp >> 8; // takes bottom 8 bits
-  
-  // output low byte on OC1B
-  OCR1BH = 0x00;
-  OCR1BL = temp;
-
 }
 
 
