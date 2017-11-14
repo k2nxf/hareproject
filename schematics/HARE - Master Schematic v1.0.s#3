@@ -16352,13 +16352,13 @@ In this library the device names are the same as the pin names of the symbols, t
 <part name="C10" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value="1uF"/>
 <part name="R13" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="47k"/>
 <part name="R14" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="100k"/>
-<part name="C11" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value="100nF"/>
-<part name="C12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value="100nF"/>
-<part name="R15" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="47k"/>
+<part name="C11" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value="0.22uF"/>
+<part name="C12" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value="0.22uF"/>
+<part name="R15" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="10k"/>
 <part name="D2" library="gm-diodes" deviceset="1N4148" device="-3"/>
 <part name="R16" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="1k"/>
 <part name="SUPPLY13" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
-<part name="R17" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="100k"/>
+<part name="R17" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="10k"/>
 <part name="LDR1" library="gm-resistors" deviceset="LDR" device="5MM" value="100k"/>
 <part name="SUPPLY14" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="R18" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="R-US_" device="R0805" package3d_urn="urn:adsk.eagle:package:26059/1" value="1k"/>
@@ -16648,8 +16648,8 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="P+11" gate="1" x="55.88" y="373.38"/>
 <instance part="P+12" gate="1" x="175.26" y="368.3"/>
 <instance part="P+13" gate="1" x="281.94" y="368.3"/>
-<instance part="P+15" gate="1" x="327.66" y="393.7"/>
-<instance part="P+16" gate="1" x="342.9" y="393.7"/>
+<instance part="P+15" gate="1" x="327.66" y="381"/>
+<instance part="P+16" gate="1" x="340.36" y="370.84"/>
 <instance part="P+17" gate="1" x="203.2" y="261.62"/>
 <instance part="P+18" gate="1" x="195.58" y="246.38"/>
 <instance part="P+19" gate="1" x="436.88" y="342.9"/>
@@ -16657,9 +16657,9 @@ In this library the device names are the same as the pin names of the symbols, t
 <instance part="P+21" gate="1" x="187.96" y="325.12" rot="R270"/>
 <instance part="C8" gate="G$1" x="175.26" y="358.14" rot="R180"/>
 <instance part="P+14" gate="1" x="320.04" y="393.7"/>
-<instance part="R7" gate="G$1" x="320.04" y="378.46" rot="R270"/>
-<instance part="R8" gate="G$1" x="342.9" y="373.38" rot="R270"/>
-<instance part="R9" gate="G$1" x="327.66" y="378.46" rot="R270"/>
+<instance part="R7" gate="G$1" x="320.04" y="386.08" rot="R270"/>
+<instance part="R8" gate="G$1" x="340.36" y="363.22" rot="R270"/>
+<instance part="R9" gate="G$1" x="327.66" y="373.38" rot="R270"/>
 <instance part="C9" gate="G$1" x="383.54" y="330.2" rot="R180"/>
 <instance part="C13" gate="G$1" x="474.98" y="220.98"/>
 <instance part="C16" gate="G$1" x="322.58" y="246.38"/>
@@ -17890,7 +17890,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="IC6" gate="G$1" pin="HOLD/"/>
 <wire x1="314.96" y1="365.76" x2="320.04" y2="365.76" width="0.1524" layer="91"/>
-<wire x1="320.04" y1="365.76" x2="320.04" y2="373.38" width="0.1524" layer="91"/>
+<wire x1="320.04" y1="365.76" x2="320.04" y2="381" width="0.1524" layer="91"/>
 <pinref part="R7" gate="G$1" pin="2"/>
 </segment>
 </net>
@@ -18001,17 +18001,14 @@ In this library the device names are the same as the pin names of the symbols, t
 <segment>
 <pinref part="R8" gate="G$1" pin="1"/>
 <pinref part="P+16" gate="1" pin="+5V"/>
-<wire x1="342.9" y1="378.46" x2="342.9" y2="391.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="1"/>
 <pinref part="P+14" gate="1" pin="+5V"/>
-<wire x1="320.04" y1="383.54" x2="320.04" y2="391.16" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R9" gate="G$1" pin="1"/>
 <pinref part="P+15" gate="1" pin="+5V"/>
-<wire x1="327.66" y1="391.16" x2="327.66" y2="383.54" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$54" class="0">
@@ -18041,7 +18038,7 @@ In this library the device names are the same as the pin names of the symbols, t
 <wire x1="314.96" y1="363.22" x2="327.66" y2="363.22" width="0.1524" layer="91"/>
 <label x="330.2" y="363.22" size="1.016" layer="95" xref="yes"/>
 <wire x1="327.66" y1="363.22" x2="330.2" y2="363.22" width="0.1524" layer="91"/>
-<wire x1="327.66" y1="363.22" x2="327.66" y2="373.38" width="0.1524" layer="91"/>
+<wire x1="327.66" y1="363.22" x2="327.66" y2="368.3" width="0.1524" layer="91"/>
 <junction x="327.66" y="363.22"/>
 <pinref part="R9" gate="G$1" pin="2"/>
 </segment>
@@ -18095,9 +18092,10 @@ In this library the device names are the same as the pin names of the symbols, t
 <net name="N$18" class="0">
 <segment>
 <pinref part="IC6" gate="G$1" pin="WP/"/>
+<wire x1="314.96" y1="355.6" x2="332.74" y2="355.6" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="355.6" x2="332.74" y2="358.14" width="0.1524" layer="91"/>
+<wire x1="332.74" y1="358.14" x2="340.36" y2="358.14" width="0.1524" layer="91"/>
 <pinref part="R8" gate="G$1" pin="2"/>
-<wire x1="314.96" y1="355.6" x2="342.9" y2="355.6" width="0.1524" layer="91"/>
-<wire x1="342.9" y1="355.6" x2="342.9" y2="368.3" width="0.1524" layer="91"/>
 </segment>
 </net>
 </nets>
