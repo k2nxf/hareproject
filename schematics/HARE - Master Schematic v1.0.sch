@@ -18432,7 +18432,7 @@ Wickmann</description>
 </instance>
 <instance part="C35" gate="G$1" x="447.04" y="368.3" rot="R180"/>
 <instance part="F1" gate="G$1" x="401.32" y="332.74"/>
-<instance part="C36" gate="G$1" x="111.76" y="152.4" rot="R270"/>
+<instance part="C36" gate="G$1" x="228.6" y="149.86" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -19189,10 +19189,6 @@ Wickmann</description>
 <junction x="99.06" y="124.46"/>
 <pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="139.7" x2="106.68" y2="139.7" width="0.1524" layer="91"/>
-<wire x1="99.06" y1="139.7" x2="99.06" y2="152.4" width="0.1524" layer="91"/>
-<junction x="99.06" y="139.7"/>
-<pinref part="C36" gate="G$1" pin="2"/>
-<wire x1="99.06" y1="152.4" x2="106.68" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCA_OUT" class="0">
@@ -19205,10 +19201,6 @@ Wickmann</description>
 <pinref part="IC2" gate="B" pin="OUT"/>
 <junction x="124.46" y="121.92"/>
 <wire x1="124.46" y1="121.92" x2="139.7" y2="121.92" width="0.1524" layer="91"/>
-<pinref part="C36" gate="G$1" pin="1"/>
-<wire x1="114.3" y1="152.4" x2="124.46" y2="152.4" width="0.1524" layer="91"/>
-<wire x1="124.46" y1="152.4" x2="124.46" y2="139.7" width="0.1524" layer="91"/>
-<junction x="124.46" y="139.7"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
@@ -19307,6 +19299,10 @@ Wickmann</description>
 <junction x="208.28" y="119.38"/>
 <pinref part="R23" gate="G$1" pin="1"/>
 <wire x1="208.28" y1="132.08" x2="213.36" y2="132.08" width="0.1524" layer="91"/>
+<wire x1="208.28" y1="132.08" x2="208.28" y2="149.86" width="0.1524" layer="91"/>
+<junction x="208.28" y="132.08"/>
+<pinref part="C36" gate="G$1" pin="2"/>
+<wire x1="208.28" y1="149.86" x2="223.52" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$42" class="0">
@@ -19331,6 +19327,10 @@ Wickmann</description>
 <pinref part="C18" gate="G$1" pin="2"/>
 <wire x1="243.84" y1="116.84" x2="248.92" y2="116.84" width="0.1524" layer="91"/>
 <junction x="243.84" y="116.84"/>
+<pinref part="C36" gate="G$1" pin="1"/>
+<wire x1="231.14" y1="149.86" x2="243.84" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="243.84" y1="149.86" x2="243.84" y2="132.08" width="0.1524" layer="91"/>
+<junction x="243.84" y="132.08"/>
 </segment>
 </net>
 <net name="N$45" class="0">
