@@ -18222,6 +18222,7 @@ Wickmann</description>
 <part name="GND1" library="supply2" library_urn="urn:adsk.eagle:library:372" deviceset="GND" device=""/>
 <part name="C35" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value=".1uF"/>
 <part name="F1" library="fuse" deviceset="FUSE" device="LITTLEFUSE"/>
+<part name="C36" library="resistor" library_urn="urn:adsk.eagle:library:348" deviceset="C-EU" device="C0805K" package3d_urn="urn:adsk.eagle:package:26201/1" value="10nF"/>
 </parts>
 <sheets>
 <sheet>
@@ -18431,6 +18432,7 @@ Wickmann</description>
 </instance>
 <instance part="C35" gate="G$1" x="447.04" y="368.3" rot="R180"/>
 <instance part="F1" gate="G$1" x="401.32" y="332.74"/>
+<instance part="C36" gate="G$1" x="111.76" y="152.4" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -19187,6 +19189,10 @@ Wickmann</description>
 <junction x="99.06" y="124.46"/>
 <pinref part="R20" gate="G$1" pin="1"/>
 <wire x1="99.06" y1="139.7" x2="106.68" y2="139.7" width="0.1524" layer="91"/>
+<wire x1="99.06" y1="139.7" x2="99.06" y2="152.4" width="0.1524" layer="91"/>
+<junction x="99.06" y="139.7"/>
+<pinref part="C36" gate="G$1" pin="2"/>
+<wire x1="99.06" y1="152.4" x2="106.68" y2="152.4" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="VCA_OUT" class="0">
@@ -19199,6 +19205,10 @@ Wickmann</description>
 <pinref part="IC2" gate="B" pin="OUT"/>
 <junction x="124.46" y="121.92"/>
 <wire x1="124.46" y1="121.92" x2="139.7" y2="121.92" width="0.1524" layer="91"/>
+<pinref part="C36" gate="G$1" pin="1"/>
+<wire x1="114.3" y1="152.4" x2="124.46" y2="152.4" width="0.1524" layer="91"/>
+<wire x1="124.46" y1="152.4" x2="124.46" y2="139.7" width="0.1524" layer="91"/>
+<junction x="124.46" y="139.7"/>
 </segment>
 <segment>
 <pinref part="C17" gate="G$1" pin="2"/>
