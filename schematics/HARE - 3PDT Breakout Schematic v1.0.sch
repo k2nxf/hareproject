@@ -322,9 +322,9 @@ W = angled&lt;p&gt;
 </classes>
 <parts>
 <part name="SW1" library="gm-switches" deviceset="3PDT" device="BLUE"/>
-<part name="FRAME1" library="frames" deviceset="FRAME_A_L" device=""/>
-<part name="SV1" library="con-lstb" deviceset="MA03-1" device=""/>
-<part name="SV2" library="con-lstb" deviceset="MA03-1" device=""/>
+<part name="FRAME1" library="frames" deviceset="FRAME_A_L" device="" value="3PDT Breakout Board"/>
+<part name="SV1" library="con-lstb" deviceset="MA03-1" device="" value="FtSW1"/>
+<part name="SV2" library="con-lstb" deviceset="MA03-1" device="" value="FtSW2"/>
 </parts>
 <sheets>
 <sheet>
