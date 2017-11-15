@@ -1,45 +1,50 @@
-// The H.A.R.E Project - Audio pass-through for ATMega328P (aka Clean)
-// Rev: 0001a
+/* The H.A.R.E Project - Audio pass-through for ATMega328P (aka Clean)
+ * File: main.c
+ *
+ *  Created on: Nov 13, 2017
+ *      Author: abram
+ *      Revision: 20171115
+ *      References:
+ */
 
 #include "utilities.h"
-
-#define F_CPU 16000000UL                // define MCU clock speed
-#define __AVR_ATmega328P__ 1            // specify use of ATMega328P
-#define __OPTIMIZE__ 1                  // turn on compiler optimizations (to use delay.h)
-#define MAX_ADC 4                       // max number of ADC channels
+#define MAX_ADC 4                                     // max number of ADC channels
 
 // ------------- MAIN PROGRAM ------------ //
 int main(void) {
     // call initialization routines
-    initADC();
-    initPWM();
+    adc_init();
+    pwm_init();
+    spi_init();
 
     // setup program variables
-    uint8_t n = 0;                                // ADC counter
-    uint16_t audio = 0;                           // audio sample from ADC
+    uint8_t n = 0;                                    // ADC counter
+    uint16_t audio = 0;                               // audio sample from ADC
 
-    // main processing loop
+    // main processing loop: create effect here
     while(1) {
-        n = (n>(MAX_ADC - 1)) ? 0 : n;            // if n>3, reset n to 0
+        n = (n>(MAX_ADC - 1)) ? 0 : n;                // if n>3, reset n to 0
 
-        switch(n) {                               // grab the ADC values
-            case 0:                               // read value on ADC0
-                audio = analogRead(n);
+        switch(n) {                                   // grab the ADC values
+            case 0:                                   // read value on ADC0
+                audio = adc_read(n);
+                dac_write(audio);
                 break;
 
             case 1:
-                writeCutoff((analogRead(n))/4);   // read value on ADC1
+                cutoff_write((adc_read(n))/4);        // read value on ADC1
                 break;
 
             case 2:
-                writeResonance((analogRead(n))/4);// read value on ADC2
+                resonance_write((adc_read(n))/4);     // read value on ADC2
                 break;
 
             case 3:
-                writeAmplitude((analogRead(n))/4);// read value on ADC3
+                amplitude_write((adc_read(n))/4);     // read value on ADC3
                 break;
             }
         n++;
+        _delay_us(1);                                 // short delay before next pass
     }
 }
 
