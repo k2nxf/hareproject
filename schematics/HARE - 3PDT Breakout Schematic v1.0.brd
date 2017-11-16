@@ -73,10 +73,10 @@
 </layers>
 <board>
 <plain>
-<wire x1="0" y1="0" x2="30.46" y2="0" width="0" layer="20"/>
-<wire x1="30.46" y1="0" x2="30.46" y2="19.99" width="0" layer="20"/>
-<wire x1="30.46" y1="19.99" x2="0" y2="19.99" width="0" layer="20"/>
-<wire x1="0" y1="19.99" x2="0" y2="0" width="0" layer="20"/>
+<wire x1="2.54" y1="0" x2="29.19" y2="0" width="0" layer="20"/>
+<wire x1="29.19" y1="0" x2="29.19" y2="19.99" width="0" layer="20"/>
+<wire x1="29.19" y1="19.99" x2="2.54" y2="19.99" width="0" layer="20"/>
+<wire x1="2.54" y1="19.99" x2="2.54" y2="0" width="0" layer="20"/>
 <text x="4.572" y="17.907" size="1.27" layer="25">H.A.R.E - ECE411 Team 13</text>
 <text x="6.477" y="0.635" size="1.27" layer="25">3PDT Breakout Board</text>
 </plain>
@@ -336,15 +336,15 @@ Please make sure your boards conform to these design rules.</description>
 <element name="SV1" library="con-lstb" package="MA03-1" value="FtSW1" x="26.67" y="5.715" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="26.67" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="26.67" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="28.321" y="5.08" size="1.27" layer="25" ratio="10" rot="R270"/>
+<attribute name="NAME" x="24.765" y="4.064" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="OC_FARNELL" value="unknown" x="26.67" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="26.67" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="VALUE" x="29.845" y="11.176" size="1.27" layer="27" ratio="10" rot="R180"/>
+<attribute name="VALUE" x="28.575" y="11.176" size="1.27" layer="27" ratio="10" rot="R180"/>
 </element>
 <element name="SV2" library="con-lstb" package="MA03-1" value="FtSW2" x="4.445" y="5.715" smashed="yes" rot="R90">
 <attribute name="MF" value="" x="4.445" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="MPN" value="" x="4.445" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
-<attribute name="NAME" x="2.794" y="1.905" size="1.27" layer="25" ratio="10" rot="R90"/>
+<attribute name="NAME" x="8.89" y="7.874" size="1.27" layer="25" ratio="10" rot="R180"/>
 <attribute name="OC_FARNELL" value="unknown" x="4.445" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="OC_NEWARK" value="unknown" x="4.445" y="5.715" size="1.778" layer="27" rot="R90" display="off"/>
 <attribute name="VALUE" x="5.715" y="11.176" size="1.27" layer="27" ratio="10" rot="R180"/>
@@ -403,16 +403,16 @@ Please make sure your boards conform to these design rules.</description>
 <signal name="GND">
 <contactref element="SW1" pad="B2"/>
 <polygon width="0.1524" layer="16">
-<vertex x="0" y="0"/>
-<vertex x="0" y="20.066"/>
-<vertex x="30.48" y="20.066"/>
-<vertex x="30.48" y="0"/>
+<vertex x="2.54" y="0"/>
+<vertex x="2.54" y="20.066"/>
+<vertex x="29.21" y="20.066"/>
+<vertex x="29.21" y="0"/>
 </polygon>
 <polygon width="0.1524" layer="1">
-<vertex x="0" y="0"/>
-<vertex x="0" y="20.066"/>
-<vertex x="30.48" y="20.066"/>
-<vertex x="30.48" y="0"/>
+<vertex x="2.54" y="0"/>
+<vertex x="2.54" y="20.066"/>
+<vertex x="29.21" y="20.066"/>
+<vertex x="29.21" y="0"/>
 </polygon>
 <contactref element="SV2" pad="1"/>
 <wire x1="4.445" y1="3.175" x2="6.35" y2="3.175" width="0.6096" layer="16"/>
@@ -424,10 +424,10 @@ Please make sure your boards conform to these design rules.</description>
 </signal>
 <signal name="N$1">
 <polygon width="0.1524" layer="16" rank="2">
-<vertex x="0.127" y="19.939"/>
-<vertex x="0.127" y="0.127"/>
-<vertex x="30.353" y="0.127"/>
-<vertex x="30.353" y="19.939"/>
+<vertex x="2.667" y="19.939"/>
+<vertex x="2.667" y="0.127"/>
+<vertex x="29.083" y="0.127"/>
+<vertex x="29.083" y="19.939"/>
 </polygon>
 </signal>
 <signal name="N$2">
