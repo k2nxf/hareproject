@@ -1,0 +1,17 @@
+SuperBun bplace image:
+
+In board layour
+
+File -> Run ULP
+	->import-bmp.ulp
+Select image
+	->SUPERBUN.bmp
+Parameters:
+	DPI
+	200 DPI
+	layer 22
+Run script
+
+Group stray lines and delete them
+group image
+	move to desired position
