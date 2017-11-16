@@ -44,7 +44,7 @@ int main(void) {
                 break;
             }
         n++;
-        _delay_us(1);                                 // short delay before next pass
+        _delay_us(10);                                 // short delay before next pass
     }
 }
 

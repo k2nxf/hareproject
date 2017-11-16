@@ -34,7 +34,7 @@ void pwm_init(void) {
     // setup PWM output
     DDRD = 0x68;                          // make pin 3, 5, and 6 outputs
     OCR0A = 0;                            // disable VCF cutoff (arduino pin 6)
-    OCR0B = 0;                            // set max VCA amplitude (arduino pin 5)
+    OCR0B = 255;                          // set max VCA amplitude (arduino pin 5)
     OCR2B = 0;                            // disable VCF resonance (arduino pin 3)
     // TIMER 0
     TCCR0A = 0xA3;                        // set pins 5/6 non-inverting and fast PWM mode
@@ -59,11 +59,16 @@ uint16_t adc_read(uint8_t channel) {
     ADMUX |= channel;                     // select new ADC
     ADCSRA |= (1<<ADSC);                  // start conversion
     while(ADCSRA == 0xe3);                // wait for conversion
-    return (ADCL + (ADCH << 8));
+    uint8_t temp_L;
+    uint16_t temp_H;
+    temp_L = ADCL;
+    temp_H = (ADCH<<8) & 0xFF00;
+    return (temp_H | temp_L);             // combine high and low bit from ADC
 }
 
 void dac_write(uint16_t value) {
-    uint8_t temp_H = ((value>>8) & 0x0F); // set first 4 config bits to 0
+    uint8_t config_bits = 0x05;           // pull STDN and BUF high
+    uint8_t temp_H = ((value>>8) & 0x0F) | (config_bits<<4); // set first 4 config bits to 0
     uint8_t temp_L = (value & 0x00FF);    // clear out first 8 bits for truncation
     PORTD &= ~(1<<DAC_CS);                // set DAC_CS low to enable
     send_spi(temp_H);                     // send the bit to the DAC
@@ -73,6 +78,12 @@ void dac_write(uint16_t value) {
 
 void mem_write(uint8_t value) {           // write some value to memory
 
+}
+
+uint8_t mem_read(uint8_t location) {       // read value from memory
+    uint8_t value;
+    value = 0;
+    return value;
 }
 
 void cutoff_write(uint8_t value) {        // VCF cutoff control function
