@@ -1,0 +1,90 @@
+Library version = 0x10406
+Opening port 0
+FT_Open succeeded.  Handle is 0xa39910
+FT_GetDeviceInfo succeeded.  Device is type 5.
+FT_EE_Read succeeded.
+
+Signature1 = 0
+Signature2 = -1
+Version = 2
+VendorId = 0x0403
+ProductId = 0x6001
+Manufacturer = FTDI
+ManufacturerId = A1
+Description = FT232R USB UART
+SerialNumber = A106C5ED
+MaxPower = 90
+PnP = 1
+SelfPowered = 0
+RemoteWakeup = 1
+232R:
+-----
+	UseExtOsc = 0x0
+	HighDriveIOs = 0x0
+	EndpointSize = 0x40
+	PullDownEnableR = 0x0
+	SerNumEnableR = 0x1
+	InvertTXD = 0x0
+	InvertRXD = 0x0
+	InvertRTS = 0x0
+	InvertCTS = 0x0
+	InvertDTR = 0x0
+	InvertDSR = 0x0
+	InvertDCD = 0x0
+	InvertRI = 0x0
+	Cbus0 = 0x3
+	Cbus1 = 0x2
+	Cbus2 = 0x0
+	Cbus3 = 0x1
+	Cbus4 = 0x5
+	RIsD2XX = 0x0
+Returning 0
+
+
+
+
+------------------ ARDUINO DUEMILANOVE -----------------------
+Library version = 0x10406
+Opening port 0
+FT_Open succeeded.  Handle is 0x7a3910
+FT_GetDeviceInfo succeeded.  Device is type 5.
+FT_EE_Read succeeded.
+
+Signature1 = 0
+Signature2 = -1
+Version = 2
+VendorId = 0x0403
+ProductId = 0x6001
+Manufacturer = FTDI
+ManufacturerId = A4
+Description = FT232R USB UART
+SerialNumber = A4009U2N
+MaxPower = 90
+PnP = 0
+SelfPowered = 0
+RemoteWakeup = 1
+232R:
+-----
+	UseExtOsc = 0x0
+	HighDriveIOs = 0x0
+	EndpointSize = 0x40
+	PullDownEnableR = 0x0
+	SerNumEnableR = 0x1
+	InvertTXD = 0x0
+	InvertRXD = 0x0
+	InvertRTS = 0x0
+	InvertCTS = 0x0
+	InvertDTR = 0x0
+	InvertDSR = 0x0
+	InvertDCD = 0x0
+	InvertRI = 0x0
+	Cbus0 = 0x3
+	Cbus1 = 0x2
+	Cbus2 = 0x0
+	Cbus3 = 0x1
+	Cbus4 = 0x5
+	RIsD2XX = 0x0
+Returning 0
+
+
+
